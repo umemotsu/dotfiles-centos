@@ -15,7 +15,13 @@ echo_info "Creating symlinks to executable files..."
 mkdir -p "${HOME}/bin"
 cd "${DOT_ROOT}/bin"
 for bin_file in *; do
-    [ ! -f "${bin_file}" ] && continue
-    [ ! -x "${bin_file}" ] && continue
+    if [ ! -f "${bin_file}" ]; then
+        echo_warning "Ignore non-regular file (${bin_file})."
+        continue
+    fi
+    if [ ! -x "${bin_file}" ]; then
+        echo_warning "Ignore non-executable file (${bin_file})."
+        continue
+    fi
     ln -fvns "$(pwd)/${bin_file}" "${HOME}/bin/${bin_file}"
 done
