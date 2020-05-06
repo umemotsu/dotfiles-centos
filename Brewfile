@@ -31,6 +31,7 @@ brew "tree"
 brew "wdiff"
 brew "wget"
 brew "whalebrew"
+brew "zplug"
 brew "zsh"
 brew "sanemat/font/ricty", args: ["with-powerline"]
 cask "adobe-acrobat-reader"
