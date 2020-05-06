@@ -1,0 +1,10 @@
+*.elc
+*~
+.#*
+/.mc-lists.el
+/auto-save-list/
+/ac-comphist.dat
+/kkcrc
+/tramp
+/url/
+/recentf
