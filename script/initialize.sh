@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 DOT_ROOT="$(cd $(dirname $0)/.. && pwd)"
 source "${DOT_ROOT}/script/utils.sh"
 
