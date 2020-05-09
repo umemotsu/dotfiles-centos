@@ -11,5 +11,5 @@ echo_error() {
 }
 
 _echo_log() {
-    echo -e "dotfiles: \033[1m$*\033[m"
+    echo -e "($(date +"%H:%M:%S")) dotfiles: \033[1m$*\033[m"
 }
