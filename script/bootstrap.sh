@@ -20,7 +20,7 @@ if [ -d "${DOT_ROOT}" ]; then
     echo_warning "Skip downloading as the repository already exists at \"${DOT_ROOT}\"."
 else
     echo_info "Downloading the repository to \"${DOT_ROOT}\"..."
-    git clone https://github.com/umemotsu/dotfiles.git "${DOT_ROOT}"
+    run_verbosely git clone https://github.com/umemotsu/dotfiles.git "${DOT_ROOT}"
 fi
 
-"${DOT_ROOT}/script/install.sh"
+run_verbosely "${DOT_ROOT}/script/install.sh"

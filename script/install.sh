@@ -9,10 +9,10 @@ echo
 echo_info "----------"
 echo_info "DEPLOYMENT"
 echo_info "----------"
-"${DOT_ROOT}/script/deploy.sh"
+run_verbosely "${DOT_ROOT}/script/deploy.sh"
 
 echo
 echo_info "--------------"
 echo_info "INITIALIZATION"
 echo_info "--------------"
-"${DOT_ROOT}/script/initialize.sh"
+run_verbosely "${DOT_ROOT}/script/initialize.sh"

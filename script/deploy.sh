@@ -9,7 +9,7 @@ echo
 echo_info "Creating symlinks to dot files..."
 cd "${DOT_ROOT}/dot"
 for dot_file in *; do
-    ln -fvns "$(pwd)/${dot_file}" "${HOME}/.${dot_file}"
+    run_verbosely ln -fvns "$(pwd)/${dot_file}" "${HOME}/.${dot_file}"
 done
 
 echo
@@ -25,5 +25,5 @@ for bin_file in *; do
         echo_warning "Ignore non-executable file (${bin_file})."
         continue
     fi
-    ln -fvns "$(pwd)/${bin_file}" "${HOME}/bin/${bin_file}"
+    run_verbosely ln -fvns "$(pwd)/${bin_file}" "${HOME}/bin/${bin_file}"
 done

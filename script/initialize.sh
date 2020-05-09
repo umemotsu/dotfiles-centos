@@ -12,5 +12,5 @@ for init_file in $(find "${DOT_ROOT}/etc" -type f -name "*.sh" | sort); do
         echo_warning "Ignore non-executable file (${init_file})."
         continue
     fi
-    "${init_file}"
+    run_verbosely "${init_file}"
 done
