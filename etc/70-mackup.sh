@@ -8,4 +8,4 @@ source "${DOT_ROOT}/script/utils.sh"
 echo
 echo_info "mackup"
 echo_info "Restoring application settings synced by mackup..."
-mackup --verbose restore
+run_verbosely mackup --verbose restore

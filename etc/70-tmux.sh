@@ -8,4 +8,4 @@ source "${DOT_ROOT}/script/utils.sh"
 echo
 echo_info "tmux"
 echo_info "Installing tmux plugin manager called tpm..."
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+run_verbosely git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
