@@ -1,3 +1,10 @@
+run_verbosely() {
+    echo_debug "Running \"$*\"..."
+    cmd=$1
+    shift
+    ${cmd} "$@"
+}
+
 echo_debug() {
     _echo_log "\033[30m$*\033[m"
 }
