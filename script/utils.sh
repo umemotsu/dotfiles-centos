@@ -1,3 +1,7 @@
+echo_debug() {
+    _echo_log "\033[30m$*\033[m"
+}
+
 echo_info() {
     _echo_log "\033[32m$*\033[m"
 }
