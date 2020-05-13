@@ -91,6 +91,7 @@ mas "1Password", id: 443987910
 mas "BetterSnapTool", id: 417375580
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
+mas "LINE", id: 539883307
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Slack", id: 803453959
 mas "Table Tool", id: 1122008420
