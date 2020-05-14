@@ -11,7 +11,7 @@
                   "[\r\n]+\\'" ""
                   (shell-command-to-string "git symbolic-ref -q HEAD")))
          (mode-line-str (if (string-match "^refs/heads/" branch)
-                            (format "⮁ ⭠ %s " (substring branch 11)) "")))
+                            (format "  %s " (substring branch 11)) "")))
     (propertize mode-line-str 'face 'mode-line-2-fg)))
 
 (defun get-coding-type ()
@@ -38,7 +38,7 @@
     (propertize mode-line-str 'face 'mode-line-2-fg)))
 
 (defun buffer-status-mode-line ()
-  (let* ((mode-line-str (format "⮁ %s%s%s:%s "
+  (let* ((mode-line-str (format " %s%s%s:%s "
                                 (if (file-readable-p buffer-file-name) "r" "-")
                                 (if (file-writable-p buffer-file-name) "w" "-")
                                 (if (file-executable-p buffer-file-name) "x" "-")
@@ -47,22 +47,22 @@
 
 (setq-default mode-line-format '(
   (:propertize " %b "           face mode-line-1-fg)
-  (:propertize "⮀"              face mode-line-1-bg)
+  (:propertize ""              face mode-line-1-bg)
   (:eval (buffer-type-mode-line))
   (:eval (buffer-status-mode-line))
   (:eval (git-branch-mode-line))
-  (:propertize "⮀"              face mode-line-2-bg)
+  (:propertize ""              face mode-line-2-bg)
   (:propertize " %m "           face mode-line-4-fg)
-  (:propertize "⮁"             face mode-line-4-fg)
+  (:propertize ""             face mode-line-4-fg)
   (:propertize minor-mode-alist face mode-line-4-fg)
   (:propertize " "              face mode-line-4-fg)
-  (:propertize "⮀"              face mode-line-4-bg)
+  (:propertize ""              face mode-line-4-bg)
   (:eval (propertize " " 'display '((space :align-to (- right-fringe 24)))))
-  (:propertize "⮂"              face mode-line-5-bg)
-  (:propertize " ⭡ "            face mode-line-2-fg)
+  (:propertize ""              face mode-line-5-bg)
+  (:propertize "  "            face mode-line-2-fg)
   (:propertize "%5l"             face mode-line-2-fg)
   (:propertize ":%4c "            face mode-line-2-fg)
-  (:propertize "⮂"              face mode-line-6-bg)
+  (:propertize ""              face mode-line-6-bg)
   (:propertize " %6p "           face mode-line-4-fg)))
 
 (set-face-attribute 'mode-line nil
