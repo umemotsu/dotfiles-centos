@@ -93,6 +93,7 @@ mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "LINE", id: 539883307
 mas "Microsoft Remote Desktop", id: 1295203466
+mas "PopClip", id: 445189367
 mas "Slack", id: 803453959
 mas "Table Tool", id: 1122008420
 mas "The Unarchiver", id: 425424353
