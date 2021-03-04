@@ -91,7 +91,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "webex-meetings"
 cask "webpquicklook"
-cask "zoomus"
+cask "zoom"
 mas "1Password", id: 443987910
 mas "BetterSnapTool", id: 417375580
 mas "GarageBand", id: 682658836
