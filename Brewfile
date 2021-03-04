@@ -104,6 +104,7 @@ mas "PopClip", id: 445189367
 mas "Slack", id: 803453959
 mas "Table Tool", id: 1122008420
 mas "The Unarchiver", id: 425424353
+mas "Twitter", id: 1482454543
 mas "WinArchiver Lite", id: 414855915
 mas "Xcode", id: 497799835
 mas "スケッチ風ドロー", id: 543896183
