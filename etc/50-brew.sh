@@ -13,6 +13,14 @@ if type brew >/dev/null 2>&1; then
 else
     echo_info "Installing brew itself..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+    echo_info "Export brew-specific variables"
+    if [ "$(uname -m)" = "arm64" ]; then
+        eval $(/opt/homebrew/bin/brew shellenv)
+    else
+        eval $(/usr/local/bin/brew shellenv)
+    fi
+
     echo_info "Checking if any potential problems exist..."
     run_verbosely brew doctor
 fi
