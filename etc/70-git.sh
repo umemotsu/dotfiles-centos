@@ -8,4 +8,4 @@ source "${DOT_ROOT}/script/utils.sh"
 echo
 echo_info "git"
 echo_info "Adding diff-highlight to PATH..."
-run_verbosely ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/
+run_verbosely ln -s $(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight $(brew --prefix)/bin/
