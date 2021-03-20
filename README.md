@@ -14,7 +14,13 @@
     xcode-select --install
     ```
 
-3. Run the bootstrap script of this repository.
+3. Install Rosetta 2 (only for Macs with Apple silicon).
+
+    ```bash
+    sudo softwareupdate --install-rosetta
+    ```
+
+4. Run the bootstrap script of this repository.
 
     ```bash
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/umemotsu/dotfiles/master/script/bootstrap.sh)"
