@@ -13,6 +13,7 @@ if type brew >/dev/null 2>&1; then
 else
     echo_info "Installing brew itself..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    echo_info "Checking if any potential problems exist..."
     run_verbosely brew doctor
 fi
 
