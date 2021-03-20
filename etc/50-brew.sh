@@ -12,7 +12,7 @@ if type brew >/dev/null 2>&1; then
     echo_warning "Skip brew installation as it already exists."
 else
     echo_info "Installing brew itself..."
-    run_verbosely /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     run_verbosely brew doctor
 fi
 
