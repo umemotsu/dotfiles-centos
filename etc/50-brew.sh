@@ -19,6 +19,10 @@ else
     echo_info "Export brew-specific variables"
     eval $(~/.linuxbrew/bin/brew shellenv)
 
+    echo_info "Adding brew repositories..."
+    run_verbosely brew tap "homebrew/core"
+    run_verbosely brew tap "homebrew/bundle"
+
     echo_info "Checking if any potential problems exist..."
     run_verbosely brew doctor
 fi
