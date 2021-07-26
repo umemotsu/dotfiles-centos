@@ -1,6 +1,5 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
-tap "sanemat/font"
 brew "colordiff"
 brew "coreutils"
 brew "emacs"
@@ -27,4 +26,3 @@ brew "wget"
 brew "whalebrew"
 brew "zplug"
 brew "zsh"
-brew "sanemat/font/ricty", args: ["with-powerline"]
