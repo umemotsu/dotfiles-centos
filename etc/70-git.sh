@@ -9,4 +9,4 @@ source "${DOT_ROOT}/dot/bash/inits/50-brew.sh"
 echo
 echo_info "git"
 echo_info "Adding diff-highlight to PATH..."
-run_verbosely ln -s $(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight $(brew --prefix)/bin/
+run_verbosely ln -fvns $(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight $(brew --prefix)/bin/
