@@ -1,4 +1,4 @@
-# dotfiles for macOS
+# dotfiles for CentOS
 
 ## from scratch
 
