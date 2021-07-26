@@ -1,8 +1,4 @@
-if [ "$(uname -m)" = "arm64" ]; then
-    HOMEBREW_PREFIX="/opt/homebrew"
-else
-    HOMEBREW_PREFIX="/usr/local"
-fi
+HOMEBREW_PREFIX="${HOME}/.linuxbrew"
 
 if [ -x "${HOMEBREW_PREFIX}/bin/brew" ]; then
     eval $("${HOMEBREW_PREFIX}/bin/brew" shellenv)

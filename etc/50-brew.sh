@@ -12,14 +12,12 @@ if type brew >/dev/null 2>&1; then
     echo_warning "Skip brew installation as it already exists."
 else
     echo_info "Installing brew itself..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    run_verbosely git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew
+    run_verbosely mkdir ~/.linuxbrew/bin
+    run_verbosely ln -s ~/.linuxbrew/Homebrew/bin/brew ~/.linuxbrew/bin
 
     echo_info "Export brew-specific variables"
-    if [ "$(uname -m)" = "arm64" ]; then
-        eval $(/opt/homebrew/bin/brew shellenv)
-    else
-        eval $(/usr/local/bin/brew shellenv)
-    fi
+    eval $(~/.linuxbrew/bin/brew shellenv)
 
     echo_info "Checking if any potential problems exist..."
     run_verbosely brew doctor
