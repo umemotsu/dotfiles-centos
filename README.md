@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles for macOS
 
 ## from scratch
 
@@ -23,5 +23,5 @@
 4. Run the bootstrap script of this repository.
 
     ```bash
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/umemotsu/dotfiles/master/script/bootstrap.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/umemotsu/dotfiles-macos/main/script/bootstrap.sh)"
     ```
