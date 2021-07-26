@@ -4,6 +4,7 @@ set -eu
 
 DOT_ROOT="$(cd $(dirname $0)/.. && pwd)"
 source "${DOT_ROOT}/script/utils.sh"
+source "${DOT_ROOT}/dot/bash/inits/50-brew.sh"
 
 echo
 echo_info "git"

@@ -15,14 +15,7 @@ else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     echo_info "Export brew-specific variables"
-    if [ -d ~/.linuxbrew ]; then
-        eval $(~/.linuxbrew/bin/brew shellenv)
-    elif [ -d /home/linuxbrew/.linuxbrew ]; then
-        eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-    else
-        echo_error "Failed to locate brew prefix path."
-        exit 1
-    fi
+    source "${DOT_ROOT}/dot/bash/inits/50-brew.sh"
 
     echo_info "Adding brew repositories..."
     run_verbosely brew tap "homebrew/core"
