@@ -1,1 +1,1 @@
-# dotfiles-centos
+# dotfiles
