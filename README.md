@@ -2,25 +2,14 @@
 
 ## from scratch
 
-1. Complete OS-specific configuration via `System Preferences` manually (not automated as of now).
-
-    - Apple ID
-    - Network
-    - ...
-
-2. Install the command line developer tools.
+1. Install [dependencies for Homebrew on CentOS](https://docs.brew.sh/Homebrew-on-Linux).
 
     ```bash
-    xcode-select --install
+    sudo yum groupinstall 'Development Tools'
+    sudo yum install procps-ng curl file git
     ```
 
-3. Install Rosetta 2 (only for Macs with Apple silicon).
-
-    ```bash
-    sudo softwareupdate --install-rosetta
-    ```
-
-4. Run the bootstrap script of this repository.
+2. Run the bootstrap script of this repository.
 
     ```bash
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/umemotsu/dotfiles-centos/main/script/bootstrap.sh)"
