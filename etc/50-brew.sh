@@ -22,7 +22,14 @@ else
     run_verbosely brew tap "homebrew/bundle"
 
     echo_info "Checking if any potential problems exist..."
-    run_verbosely brew doctor
+    run_verbosely brew doctor || {
+        echo_warning "Found some potential problem(s)."
+        read -n 1 -p "Do you want to continue installation? [y/n]: " yn
+        echo
+        if [[ ! ${yn} =~ ^[Yy]$ ]]; then
+            exit 1
+        fi
+    }
 fi
 
 echo_info "Installing packages in Brewfile..."
