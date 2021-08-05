@@ -13,9 +13,7 @@ if type brew >/dev/null 2>&1; then
         zplug "b4b4r07/enhancd", use:init.sh
 
         # Themes
-        zplug "modules/git", from:prezto
-        zplug "modules/prompt", from:prezto
-        zstyle ":prezto:module:prompt" theme "pure"
+        zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
         # Auto-install new plugins
         if ! zplug check --verbose; then
